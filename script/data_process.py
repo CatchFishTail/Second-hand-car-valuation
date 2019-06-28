@@ -121,34 +121,34 @@ def process(fin,processed_data):
         else:
             stop_type_lw = -1
 
-        #获得发动机类型
+        # 获得发动机类型
         if info[63] in engine:
             engine_type = engine.index(info[63])
         else:
             engine_type = -1
 
-        #获得燃油类型
+        # 获得燃油类型
         fuel_type = int(info[82][:2])
 
-        #获得变速箱类型
+        # 获得变速箱类型
         if info[83] in transmission:
             transmission_type = transmission.index(info[83])
         else:
             transmission_type = -1
 
-        #获得驱动类型
+        # 获得驱动类型
         if info[85] in all_wheel_drive:
             all_wheel_drive_type = all_wheel_drive.index(info[85])
         else:
             all_wheel_drive_type = -1
 
-        #获得座椅材质
+        # 获得座椅材质
         if info[153] in chair:
             chair_type = chair.index(info[153])
         else:
             chair_type = -1
 
-        # 车辆颜色
+        # 获得车辆颜色
         if info[-1][:-1] in color:
             color_type = color.index(info[-1][:-1])
         else:
